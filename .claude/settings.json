@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Bash(git status)",
+      "Bash(git status *)",
+      "Bash(git diff)",
+      "Bash(git diff *)",
+      "Bash(git log)",
+      "Bash(git log *)",
+      "PowerShell(git status)",
+      "PowerShell(git status *)",
+      "PowerShell(git diff)",
+      "PowerShell(git diff *)",
+      "PowerShell(git log)",
+      "PowerShell(git log *)"
+    ],
+    "ask": [
+      "Edit(.claude/**)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "PowerShell(git add *)",
+      "PowerShell(git commit *)",
+      "PowerShell(Remove-Item * -Recurse*)",
+      "PowerShell(Remove-Item -Recurse*)",
+      "PowerShell(rm * -Recurse*)",
+      "PowerShell(del * -Recurse*)",
+      "PowerShell(ri * -Recurse*)"
+    ],
+    "deny": [
+      "Bash(git push)",
+      "Bash(git push *)",
+      "Bash(rm -rf *)",
+      "Bash(rm -fr *)",
+      "PowerShell(git push)",
+      "PowerShell(git push *)",
+      "PowerShell(rm -rf *)",
+      "PowerShell(rm -fr *)"
+    ]
+  }
+}
