@@ -73,7 +73,6 @@ robotics-e2e-control/
 ├── experiments/      # 시스템별, 주제별 실험
 │   └── <시스템>/<주제>/   # 예: 2dof/dynamics, 6dof/kinematics
 ├── apps/             # web-ui, unity-twin
-├── sim/              # 시뮬레이션 실행 코드 (모델 파일은 models/ 참조)
 └── docs/             # 리포트, 다이어그램
 ```
 
