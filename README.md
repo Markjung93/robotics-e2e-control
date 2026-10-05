@@ -68,9 +68,12 @@ flowchart LR
 robotics-e2e-control/
 ├── README.md
 ├── framework/        # core, model, control, hal, comm
-├── experiments/      # 01_2dof_dynamics, 02_6dof_kinematics, ...
+├── models/           # 시스템별 모델의 단일 출처 (시스템을 시작할 때 폴더 생성)
+│   └── <시스템>/     # 파라미터 표, MJCF, URDF, README(출처와 라이선스)
+├── experiments/      # 시스템별, 주제별 실험
+│   └── <시스템>/<주제>/   # 예: 2dof/dynamics, 6dof/kinematics
 ├── apps/             # web-ui, unity-twin
-├── sim/              # urdf, mjcf
+├── sim/              # 시뮬레이션 실행 코드 (모델 파일은 models/ 참조)
 └── docs/             # 리포트, 다이어그램
 ```
 
