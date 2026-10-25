@@ -1,0 +1,25 @@
+# 평면 2DOF 팔 (수직 평면) 파라미터. 이 파일이 파라미터의 단일 출처입니다.
+# URDF(Pinocchio)와 MJCF(MuJoCo)는 이 값에서 만들어지며, 다른 곳에 값을 복사하지 않습니다.
+#   재생성: python experiments/planar-2dof/dynamics_compare_2dof.py --write-models models/planar-2dof
+#   검증:   python experiments/planar-2dof/dynamics_compare_2dof.py   (파일이 이 값과 다르면 FAIL)
+#
+# 좌표계: x-y 평면, 중력은 -y 방향, 회전축은 z.
+# q1: 베이스 기준 절대 각도, q2: 링크1 기준 상대 각도 [rad].
+# 단위: 질량 [kg], 길이 [m], 관성 [kg m^2], 중력 [m/s^2].
+# 손 유도 식은 무게중심이 링크 중간(com = length / 2)이라고 가정하므로 com 을 바꾸려면 식도 다시 유도해야 합니다.
+# 관성은 무게중심을 지나는 z축 기준이며, 균일한 막대(m * l^2 / 12)로 둡니다.
+
+name: planar-2dof
+gravity: 9.81
+
+link1:
+  mass: 1.0
+  length: 1.0
+  com: 0.5                       # 관절 축에서 무게중심까지 거리
+  inertia: 0.08333333333333333   # = 1.0 * 1.0^2 / 12
+
+link2:
+  mass: 1.0
+  length: 1.0
+  com: 0.5
+  inertia: 0.08333333333333333

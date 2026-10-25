@@ -66,3 +66,14 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# ì‹¤í—˜ ì¶œë ¥ (ì¬ìƒì„± ê°€ëŠ¥í•œ ê²°ê³¼)
+experiments/**/out/
+
+# ÆíÁı±â °³ÀÎ ¼³Á¤
+.vscode/

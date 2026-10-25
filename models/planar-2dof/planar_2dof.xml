@@ -1,0 +1,18 @@
+<!-- 자동 생성 파일: models/planar-2dof/params.yaml 에서 만들어집니다. 직접 고치지 말고 params.yaml 을 고친 뒤 다시 생성하세요. -->
+<mujoco model="planar_2dof">
+  <compiler angle="radian" inertiafromgeom="false"/>
+  <option gravity="0 -9.8100000000000005 0" timestep="0.001"/>
+  <worldbody>
+    <body name="link1" pos="0 0 0">
+      <joint name="q1" type="hinge" axis="0 0 1"/>
+      <inertial pos="0.5 0 0" mass="1" diaginertia="0.083333333333333329 0.083333333333333329 0.083333333333333329"/>
+      <geom type="capsule" fromto="0 0 0 1 0 0" size="0.03" contype="0" conaffinity="0" rgba="0.2 0.5 0.9 1"/>
+      <body name="link2" pos="1 0 0">
+        <joint name="q2" type="hinge" axis="0 0 1"/>
+        <inertial pos="0.5 0 0" mass="1" diaginertia="0.083333333333333329 0.083333333333333329 0.083333333333333329"/>
+        <geom type="capsule" fromto="0 0 0 1 0 0" size="0.03" contype="0" conaffinity="0" rgba="0.9 0.5 0.2 1"/>
+        <site name="tip" pos="1 0 0" size="0.03"/>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

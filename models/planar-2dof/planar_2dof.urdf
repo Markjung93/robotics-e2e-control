@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- 자동 생성 파일: models/planar-2dof/params.yaml 에서 만들어집니다. 직접 고치지 말고 params.yaml 을 고친 뒤 다시 생성하세요. -->
+<robot name="planar_2dof">
+  <link name="base"/>
+  <link name="link1"><inertial><origin xyz="0.5 0 0" rpy="0 0 0"/><mass value="1"/><inertia ixx="0.083333333333333329" ixy="0" ixz="0" iyy="0.083333333333333329" iyz="0" izz="0.083333333333333329"/></inertial></link>
+  <link name="link2"><inertial><origin xyz="0.5 0 0" rpy="0 0 0"/><mass value="1"/><inertia ixx="0.083333333333333329" ixy="0" ixz="0" iyy="0.083333333333333329" iyz="0" izz="0.083333333333333329"/></inertial></link>
+  <link name="tip"/>
+  <joint name="joint1" type="revolute"><parent link="base"/><child link="link1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/><axis xyz="0 0 1"/>
+    <limit lower="-6.2832" upper="6.2832" effort="1000" velocity="100"/></joint>
+  <joint name="joint2" type="revolute"><parent link="link1"/><child link="link2"/>
+    <origin xyz="1 0 0" rpy="0 0 0"/><axis xyz="0 0 1"/>
+    <limit lower="-6.2832" upper="6.2832" effort="1000" velocity="100"/></joint>
+  <joint name="tip_joint" type="fixed"><parent link="link2"/><child link="tip"/>
+    <origin xyz="1 0 0" rpy="0 0 0"/></joint>
+</robot>
