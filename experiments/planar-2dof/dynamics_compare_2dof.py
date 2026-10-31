@@ -25,7 +25,7 @@
   python dynamics_compare_2dof.py --i1-coeff 0.5   # 예전 오류(I1 계수 1/2)를 일부러 넣어 FAIL 확인
   python dynamics_compare_2dof.py --write-models ../../models/planar-2dof   # params.yaml 로 URDF, MJCF 를 다시 생성
   python dynamics_compare_2dof.py --embedded       # 파일을 쓰지 않고 내장 생성기 모델로 비교
-  python dynamics_compare_2dof.py --view           # MuJoCo 뷰어로 보기 (데스크탑 전용, 미시험)
+  python dynamics_compare_2dof.py --view           # MuJoCo 뷰어로 보기 (화면이 있는 PC 필요)
 
 필요 패키지: numpy, pin(Pinocchio), mujoco, pyyaml  /  선택: sympy (--sympy)
 이 파일은 Python 검증용입니다. Eigen은 C++ 구현 단계(P1-2)에서 같은 식을 옮길 때 사용합니다.
@@ -600,7 +600,7 @@ def main():
     ap.add_argument("--sympy", action="store_true", help="손 유도의 L 에서 sympy 로 재유도해 비교")
     ap.add_argument("--lyapunov", action="store_true", help="PD+중력보상 V(t) 수치 확인")
     ap.add_argument("--write-models", metavar="DIR", help="현재 파라미터로 planar_2dof.urdf / planar_2dof.xml 을 DIR 에 생성")
-    ap.add_argument("--view", action="store_true", help="MuJoCo 뷰어 실행 (데스크탑 전용, 미시험)")
+    ap.add_argument("--view", action="store_true", help="MuJoCo 뷰어 실행 (화면이 있는 PC 필요)")
     args = ap.parse_args()
 
     overrides = [args.m1, args.m2, args.l1, args.l2, args.I1, args.I2, args.g]

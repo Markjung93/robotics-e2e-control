@@ -43,7 +43,7 @@ python experiments/planar-2dof/dynamics_compare_2dof.py --lyapunov # PD + 중력
 | `--n-random N`, `--tol T`, `--seed S` | 무작위 상태 개수(기본 1000), 허용 오차(기본 1e-9), 시드 |
 | `--write-models DIR` | 현재 파라미터로 URDF, MJCF 를 DIR 에 생성 (`models/planar-2dof` 갱신용) |
 | `--embedded` | 모델 파일을 읽지 않고 내장 생성기 모델로 비교 |
-| `--view` | MuJoCo 뷰어 (미시험) |
+| `--view` | MuJoCo 뷰어 (화면이 있는 PC 필요) |
 
 ## 결과 (기본 파라미터, 무작위 상태 1000개, hand 대비 최대 오차)
 
